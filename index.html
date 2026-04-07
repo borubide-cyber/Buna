@@ -236,28 +236,13 @@
     </script>
 </body>
 </html>
-    </nav>
+   <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-4 pb-6 pt-3 flex justify-between z-50">
+    <button onclick="openTab('pulse', this)" class="nav-btn active-tab flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Pulse</span></button>
+    <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Squad</span></button>
+    <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">MVP</span></button>
+    <button onclick="openTab('moments', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Moments</span></button>
+</nav>
 
-    <script>
-        function openTab(tabId, btn) {
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-content'));
-            document.querySelectorAll('.nav-btn').forEach(b => {
-                b.classList.remove('active-tab', 'text-slate-100');
-                b.classList.add('text-slate-500');
-            });
-            document.getElementById(tabId).classList.add('active-content');
-            btn.classList.add('active-tab', 'text-slate-100');
-            btn.classList.remove('text-slate-500');
-        }
-    </script>
-</body>
-</html>
-‎            <span class="text-[10px] font-black uppercase tracking-tighter">MVP</span>
-‎        </button>
-‎        <button onclick="openTab('moments', this)" class="nav-btn text-slate-500 flex flex-col items-center space-y-1">
-‎            <span class="text-[10px] font-black uppercase tracking-tighter">Moments</span>
-‎        </button>
-‎    </nav>
 ‎
 ‎    <script>
 ‎        // CONFIG: PASTE YOUR 4 LINKS HERE
