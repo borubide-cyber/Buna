@@ -41,43 +41,49 @@
         <section id="pulse" class="tab-content active-content">
     <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">Latest Pulse</h2>
 
-    <div class="space-y-6">
-        <div class="glass p-5 rounded-2xl border-l-4 border-[#00ff85]">
-            <span class="text-[9px] font-black text-[#00ff85] uppercase tracking-widest">Live News</span>
-            <h3 class="text-lg font-bold leading-tight mt-1 text-white">Buna is the admin of this site!</h3>
-            <p class="text-[8px] text-slate-500 mt-2 font-bold uppercase">Just Now</p>
-        </div>
-
-        <div class="glass p-6 rounded-[2rem] border-l-4 border-[#00ff85] bg-gradient-to-r from-[#1a0b2e] to-black shadow-xl">
-            <div class="flex justify-between items-start">
+    <div class="space-y-4">
+        
+        <details class="glass rounded-2xl border-l-4 border-[#00ff85] overflow-hidden group">
+            <summary class="p-5 list-none cursor-pointer flex justify-between items-center">
                 <div>
-                    <span class="bg-[#00ff85] text-black text-[8px] font-black px-3 py-1 rounded-full uppercase">Project: Field Clearing</span>
-                    <h3 class="text-xl font-[900] italic uppercase tracking-tighter mt-3 text-white leading-tight">Preparing the<br>Pitch</h3>
+                    <span class="text-[9px] font-black text-[#00ff85] uppercase tracking-widest">Live News</span>
+                    <h3 class="text-lg font-bold leading-tight mt-1 text-white">Buna is the admin of this site!</h3>
                 </div>
-                <div class="text-right">
-                    <p class="text-[10px] font-black text-[#00ff85]">GOAL</p>
-                    <p class="text-lg font-black text-white italic">₦50,000</p>
-                </div>
+                <span class="text-[#00ff85] transition-transform group-open:rotate-180">▼</span>
+            </summary>
+            <div class="px-5 pb-5 text-sm text-slate-400 border-t border-white/5 pt-4">
+                Bnation Media is officially handling all digital updates for Council Street. 
+                Expect live scores, MVP awards, and league news updated daily!
             </div>
+        </details>
 
-            <div class="mt-6">
-                <div class="flex justify-between text-[10px] font-bold mb-2">
-                    <span class="text-slate-400 uppercase">Current Progress</span>
-                    <span class="text-[#00ff85]">60%</span>
+        <details class="glass rounded-2xl border-l-4 border-[#00ff85] overflow-hidden group">
+            <summary class="p-5 list-none cursor-pointer flex justify-between items-center">
+                <div>
+                    <span class="text-[9px] font-black text-[#00ff85] uppercase tracking-widest">Ongoing Project</span>
+                    <h3 class="text-lg font-bold leading-tight mt-1 text-white italic uppercase">Preparing the Pitch</h3>
                 </div>
-                <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
-                    <div class="bg-[#00ff85] h-full shadow-[0_0_10px_rgba(0,255,133,0.5)]" style="width: 60%"></div>
-                </div>
-            </div>
-
-            <div class="mt-6 p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
-                <p class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mb-1">Send Contributions to:</p>
-                <p class="text-lg font-black tracking-widest text-white">08086426720</p>
-                <p class="text-[9px] font-bold text-[#00ff85] uppercase">OPAY | BNATION MEDIA</p>
-            </div>
+                <span class="text-[#00ff85] transition-transform group-open:rotate-180">▼</span>
+            </summary>
             
-            <p class="text-[8px] text-center text-slate-500 mt-4 italic">"Building the home of Council Street football together."</p>
-        </div>
+            <div class="px-5 pb-5 border-t border-white/5 pt-4 bg-gradient-to-b from-transparent to-black/40">
+                <div class="flex justify-between items-end mb-4">
+                    <p class="text-[10px] font-black text-[#00ff85]">GOAL: ₦50,000</p>
+                    <p class="text-[10px] font-bold text-white">PROGRESS: 60%</p>
+                </div>
+                
+                <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden mb-6">
+                    <div class="bg-[#00ff85] h-full" style="width: 60%"></div>
+                </div>
+
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
+                    <p class="text-[9px] text-slate-500 font-bold uppercase mb-1">Pay to:</p>
+                    <p class="text-md font-black text-white">08086426720</p>
+                    <p class="text-[9px] font-bold text-[#00ff85]">OPAY | BNATION MEDIA</p>
+                </div>
+            </div>
+        </details>
+
     </div>
 </section>
 
