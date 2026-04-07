@@ -322,7 +322,40 @@
 ‎            } catch (e) { console.error(e); }
 ‎        }
 ‎        init();
-‎    </script>
+    <script>
+        function openTab(tabId, el) {
+            const content = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < content.length; i++) {
+                content[i].style.display = "none";
+                content[i].classList.remove("active-content");
+            }
+
+            const buttons = document.getElementsByClassName("nav-btn");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active-tab");
+                buttons[i].style.color = "#64748b";
+            }
+
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.style.display = "block";
+                selectedTab.classList.add("active-content");
+            }
+            el.classList.add("active-tab");
+            el.style.color = "#00ff85";
+        }
+
+        window.onload = function() {
+            const pulseTab = document.getElementById('pulse');
+            if (pulseTab) {
+                pulseTab.style.display = 'block';
+                pulseTab.classList.add('active-content');
+            }
+        };
+    </script>
+
+</body>
+</html>
 ‎</body>
 ‎</html>
 ‎
