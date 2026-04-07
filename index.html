@@ -1,64 +1,100 @@
-‎
-‎
-‎
-‎
-‎<!DOCTYPE html>
-‎<html lang="en">
-‎<head>
-‎    <meta charset="UTF-8">
-‎    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-‎    <title>Council Street | Bnation Professional</title>
-‎    <script src="https://cdn.tailwindcss.com"></script>
-‎    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-‎    <style>
-‎        body { font-family: 'Inter', sans-serif; background-color: #050119; color: #f8fafc; }
-‎        .pl-gradient { background: linear-gradient(135deg, #3d195b 0%, #110129 100%); }
-‎        .tab-content { display: none; }
-‎        .active-content { display: block; }
-‎        .active-tab { color: #00ff85 !important; border-top: 3px solid #00ff85; }
-‎        .glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
-‎    </style>
-‎</head>
-‎<body>
-‎
-‎    <header class="pl-gradient p-8 text-center border-b border-white/10">
-‎        <h1 class="text-3xl font-900 italic tracking-tighter uppercase">Council Street</h1>
-‎        <p class="text-[10px] tracking-[0.4em] text-[#00ff85] font-bold uppercase">Bnation Media Official Hub</p>
-‎    </header>
-‎
-‎    <main class="max-w-md mx-auto p-4 pb-32">
-‎
-‎        <section id="pulse" class="tab-content active-content">
-‎            <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">Latest Pulse</h2>
-‎            <div id="pulse-list" class="space-y-4">
-‎                <p class="text-slate-600 animate-pulse">Connecting to pitch...</p>
-‎            </div>
-‎        </section>
-‎
-‎        <section id="squad" class="tab-content">
-‎            <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">The Squad</h2>
-‎            <div id="squad-grid" class="grid grid-cols-1 gap-4"></div>
-‎        </section>
-‎
-‎        <section id="spotlight" class="tab-content">
-‎            <div id="mvp-content"></div>
-‎        </section>
-‎
-‎        <section id="moments" class="tab-content">
-‎            <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">Council Moments</h2>
-‎            <div id="moments-list" class="space-y-4"></div>
-‎        </section>
-‎
-‎    </main>
-‎
-‎    <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-6 pb-6 pt-3 flex justify-between z-50">
-‎        <button onclick="openTab('pulse', this)" class="nav-btn active-tab flex flex-col items-center space-y-1">
-‎            <span class="text-[10px] font-black uppercase tracking-tighter">Pulse</span>
-‎        </button>
-‎        <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center space-y-1">
-‎            <span class="text-[10px] font-black uppercase tracking-tighter">Squad</span>
-‎        </button>
-‎        <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center space-y-1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Council Street Football</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050119; color: #f8fafc; }
+        .pl-gradient { background: linear-gradient(135deg, #3d195b 0%, #110129 100%); }
+        .tab-content { display: none; }
+        .active-content { display: block; }
+        .active-tab { color: #00ff85 !important; border-top: 3px solid #00ff85; }
+        .glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body>
+
+    <header class="pl-gradient p-8 text-center border-b border-white/10">
+        <h1 class="text-3xl font-[900] italic tracking-tighter uppercase">Council Street</h1>
+        <p class="text-[10px] tracking-[0.4em] text-[#00ff85] font-bold uppercase">Bnation Media Official Hub</p>
+    </header>
+
+    <main class="max-w-md mx-auto p-4 pb-32">
+
+        <section id="pulse" class="tab-content active-content">
+            <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">Latest Pulse</h2>
+            <div class="space-y-4">
+                <div class="glass p-5 rounded-2xl border-l-4 border-[#00ff85]">
+                    <span class="text-[9px] font-black text-[#00ff85] uppercase tracking-widest">Live News</span>
+                    <h3 class="text-lg font-bold leading-tight mt-1">Bnation is officially taking over Council Street!</h3>
+                    <p class="text-[8px] text-slate-500 mt-2">JUST NOW</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="squad" class="tab-content">
+            <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">The Squad</h2>
+            <div class="grid grid-cols-1 gap-4">
+                <div class="flex items-center glass p-4 rounded-2xl">
+                    <div class="w-14 h-14 rounded-full bg-purple-900 border-2 border-[#00ff85] flex items-center justify-center font-bold">14</div>
+                    <div class="ml-4">
+                        <h4 class="text-lg font-black italic uppercase">Binaebi Goodluck</h4>
+                        <p class="text-[9px] font-bold text-slate-400">GOALS: 12 | ASSISTS: 5</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="spotlight" class="tab-content">
+            <div class="bg-gradient-to-br from-[#3d195b] to-black p-10 rounded-[2.5rem] border border-[#00ff85]/20 text-center">
+                <span class="bg-[#00ff85] text-black text-[10px] font-black px-4 py-1 rounded-full">MVP OF THE DAY</span>
+                <div class="w-40 h-40 mx-auto rounded-full mt-8 border-4 border-[#00ff85] bg-slate-800 flex items-center justify-center">PHOTO</div>
+                <h2 class="text-4xl font-[900] mt-6 italic uppercase tracking-tighter">Top Scorer</h2>
+                <p class="text-[#00ff85] font-bold text-sm mt-2 uppercase tracking-widest">Week 1 Dominance</p>
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-6 pb-6 pt-3 flex justify-between z-50">
+        <button onclick="openTab('pulse', this)" class="nav-btn active-tab flex flex-col items-center"><span class="text-[10px] font-black uppercase">Pulse</span></button>
+        <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center"><span class="text-[10px] font-black uppercase">Squad</span></button>
+        <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center"><span class="text-[10px] font-black uppercase">MVP</span></button>
+    </nav>
+
+    <script>
+        function openTab(tabId, btn) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-content'));
+            document.querySelectorAll('.nav-btn').forEach(b => {
+                b.classList.remove('active-tab', 'text-slate-100');
+                b.classList.add('text-slate-500');
+            });
+            document.getElementById(tabId).classList.add('active-content');
+            btn.classList.add('active-tab', 'text-slate-100');
+            btn.classList.remove('text-slate-500');
+        }
+    </script>
+</body>
+</html>
+    </nav>
+
+    <script>
+        function openTab(tabId, btn) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-content'));
+            document.querySelectorAll('.nav-btn').forEach(b => {
+                b.classList.remove('active-tab', 'text-slate-100');
+                b.classList.add('text-slate-500');
+            });
+            document.getElementById(tabId).classList.add('active-content');
+            btn.classList.add('active-tab', 'text-slate-100');
+            btn.classList.remove('text-slate-500');
+        }
+    </script>
+</body>
+</html>
 ‎            <span class="text-[10px] font-black uppercase tracking-tighter">MVP</span>
 ‎        </button>
 ‎        <button onclick="openTab('moments', this)" class="nav-btn text-slate-500 flex flex-col items-center space-y-1">
