@@ -217,7 +217,7 @@
     </main>
 
     <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-6 pb-6 pt-3 flex justify-between z-50">
-        <button onclick="openTab('pulse', this)" class="nav-btn active-tab flex flex-col items-center"><span class="text-[10px] font-black uppercase">Pulse</span></button>
+        <button onclick="openTab('news', this)" class="nav-btn active-tab flex flex-col items-center"><span class="text-[10px] font-black uppercase">Pulse</span></button>
         <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center"><span class="text-[10px] font-black uppercase">Squad</span></button>
         <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center"><span class="text-[10px] font-black uppercase">MVP</span></button>
     </nav>
@@ -237,7 +237,7 @@
 </body>
 </html>
    <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-4 pb-6 pt-3 flex justify-between z-50">
-    <button onclick="openTab('pulse', this)" class="nav-btn active-tab flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Pulse</span></button>
+    <button onclick="openTab('news', this)" class="nav-btn active-tab flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Pulse</span></button>
     <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Squad</span></button>
     <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">MVP</span></button>
     <button onclick="openTab('moments', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Moments</span></button>
@@ -247,7 +247,7 @@
 ‎    <script>
 ‎        // CONFIG: PASTE YOUR 4 LINKS HERE
 ‎        const links = {
-‎            pulse: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=1664812316&single=true&output=csv",
+‎            news: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=1664812316&single=true&output=csv",
 ‎            squad: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=1087938023&single=true&output=csv",
 ‎            spotlight: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=878778781&single=true&output=csv",
 ‎            moments: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=988841300&single=true&output=csv"
@@ -268,8 +268,8 @@
 ‎        async function init() {
 ‎            try {
 ‎                // LOAD PULSE
-‎                const pText = await fetch(links.pulse).then(r => r.text());
-‎                document.getElementById('pulse-list').innerHTML = pText.split('\n').slice(1).map(r => {
+‎                const pText = await fetch(links.news).then(r => r.text());
+‎                document.getElementById('news-list').innerHTML = pText.split('\n').slice(1).map(r => {
 ‎                    const c = r.split(','); if(!c[2]) return '';
 ‎                    return `<div class="glass p-5 rounded-2xl border-l-4 border-[#00ff85]">
 ‎                        <div class="flex justify-between items-center mb-2">
