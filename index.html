@@ -1,0 +1,148 @@
+‎
+‎
+‎
+‎
+‎<!DOCTYPE html>
+‎<html lang="en">
+‎<head>
+‎    <meta charset="UTF-8">
+‎    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎    <title>Council Street | Bnation Professional</title>
+‎    <script src="https://cdn.tailwindcss.com"></script>
+‎    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+‎    <style>
+‎        body { font-family: 'Inter', sans-serif; background-color: #050119; color: #f8fafc; }
+‎        .pl-gradient { background: linear-gradient(135deg, #3d195b 0%, #110129 100%); }
+‎        .tab-content { display: none; }
+‎        .active-content { display: block; }
+‎        .active-tab { color: #00ff85 !important; border-top: 3px solid #00ff85; }
+‎        .glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
+‎    </style>
+‎</head>
+‎<body>
+‎
+‎    <header class="pl-gradient p-8 text-center border-b border-white/10">
+‎        <h1 class="text-3xl font-900 italic tracking-tighter uppercase">Council Street</h1>
+‎        <p class="text-[10px] tracking-[0.4em] text-[#00ff85] font-bold uppercase">Bnation Media Official Hub</p>
+‎    </header>
+‎
+‎    <main class="max-w-md mx-auto p-4 pb-32">
+‎
+‎        <section id="pulse" class="tab-content active-content">
+‎            <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">Latest Pulse</h2>
+‎            <div id="pulse-list" class="space-y-4">
+‎                <p class="text-slate-600 animate-pulse">Connecting to pitch...</p>
+‎            </div>
+‎        </section>
+‎
+‎        <section id="squad" class="tab-content">
+‎            <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">The Squad</h2>
+‎            <div id="squad-grid" class="grid grid-cols-1 gap-4"></div>
+‎        </section>
+‎
+‎        <section id="spotlight" class="tab-content">
+‎            <div id="mvp-content"></div>
+‎        </section>
+‎
+‎        <section id="moments" class="tab-content">
+‎            <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">Council Moments</h2>
+‎            <div id="moments-list" class="space-y-4"></div>
+‎        </section>
+‎
+‎    </main>
+‎
+‎    <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-6 pb-6 pt-3 flex justify-between z-50">
+‎        <button onclick="openTab('pulse', this)" class="nav-btn active-tab flex flex-col items-center space-y-1">
+‎            <span class="text-[10px] font-black uppercase tracking-tighter">Pulse</span>
+‎        </button>
+‎        <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center space-y-1">
+‎            <span class="text-[10px] font-black uppercase tracking-tighter">Squad</span>
+‎        </button>
+‎        <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center space-y-1">
+‎            <span class="text-[10px] font-black uppercase tracking-tighter">MVP</span>
+‎        </button>
+‎        <button onclick="openTab('moments', this)" class="nav-btn text-slate-500 flex flex-col items-center space-y-1">
+‎            <span class="text-[10px] font-black uppercase tracking-tighter">Moments</span>
+‎        </button>
+‎    </nav>
+‎
+‎    <script>
+‎        // CONFIG: PASTE YOUR 4 LINKS HERE
+‎        const links = {
+‎            pulse: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=1664812316&single=true&output=csv",
+‎            squad: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=1087938023&single=true&output=csv",
+‎            spotlight: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=878778781&single=true&output=csv",
+‎            moments: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=988841300&single=true&output=csv"
+‎        };
+‎
+‎        function openTab(tabId, btn) {
+‎            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-content'));
+‎            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active-tab', 'text-slate-100'));
+‎            document.querySelectorAll('.nav-btn').forEach(b => b.classList.add('text-slate-500'));
+‎            
+‎            document.getElementById(tabId).classList.add('active-content');
+‎            btn.classList.add('active-tab');
+‎            btn.classList.remove('text-slate-500');
+‎            btn.classList.add('text-slate-100');
+‎            window.scrollTo(0,0);
+‎        }
+‎
+‎        async function init() {
+‎            try {
+‎                // LOAD PULSE
+‎                const pText = await fetch(links.pulse).then(r => r.text());
+‎                document.getElementById('pulse-list').innerHTML = pText.split('\n').slice(1).map(r => {
+‎                    const c = r.split(','); if(!c[2]) return '';
+‎                    return `<div class="glass p-5 rounded-2xl border-l-4 border-[#00ff85]">
+‎                        <div class="flex justify-between items-center mb-2">
+‎                            <span class="text-[9px] font-black text-[#00ff85] uppercase tracking-widest">${c[1]}</span>
+‎                            <span class="text-[8px] text-slate-500">${c[0]}</span>
+‎                        </div>
+‎                        <h3 class="text-lg font-bold leading-tight">${c[2]}</h3>
+‎                    </div>`;
+‎                }).join('');
+‎
+‎                // LOAD SQUAD
+‎                const sText = await fetch(links.squad).then(r => r.text());
+‎                document.getElementById('squad-grid').innerHTML = sText.split('\n').slice(1).map(r => {
+‎                    const c = r.split(','); if(!c[0]) return '';
+‎                    return `<div class="flex items-center glass p-4 rounded-2xl">
+‎                        <img src="${c[2]}" class="w-14 h-14 rounded-full object-cover border-2 border-purple-500">
+‎                        <div class="ml-4">
+‎                            <h4 class="text-lg font-black italic uppercase">${c[0]}</h4>
+‎                            <div class="flex space-x-3 text-[9px] font-bold text-slate-400">
+‎                                <span>GOALS: ${c[3]}</span> <span>ASSISTS: ${c[4]}</span>
+‎                            </div>
+‎                        </div>
+‎                    </div>`;
+‎                }).join('');
+‎
+‎                // LOAD SPOTLIGHT
+‎                const spText = await fetch(links.spotlight).then(r => r.text());
+‎                const sp = spText.split('\n')[1].split(',');
+‎                document.getElementById('mvp-content').innerHTML = `
+‎                    <div class="bg-gradient-to-br from-[#3d195b] to-black p-10 rounded-[2.5rem] border border-[#00ff85]/20 text-center shadow-2xl">
+‎                        <span class="bg-[#00ff85] text-black text-[10px] font-black px-4 py-1 rounded-full">MVP OF THE DAY</span>
+‎                        <img src="${sp[2]}" class="w-40 h-40 mx-auto rounded-full mt-8 border-4 border-[#00ff85] object-cover shadow-[0_0_20px_rgba(0,255,133,0.3)]">
+‎                        <h2 class="text-4xl font-900 mt-6 italic uppercase tracking-tighter">${sp[0]}</h2>
+‎                        <p class="text-[#00ff85] font-bold text-sm mt-2 uppercase tracking-widest">${sp[3]}</p>
+‎                    </div>`;
+‎
+‎                // LOAD MOMENTS
+‎                const mText = await fetch(links.moments).then(r => r.text());
+‎                document.getElementById('moments-list').innerHTML = mText.split('\n').slice(1).map(r => {
+‎                    const c = r.split(','); if(!c[1]) return '';
+‎                    return `<div class="glass p-5 rounded-2xl italic text-slate-300 relative">
+‎                        <span class="text-4xl absolute top-2 right-4 opacity-10">"</span>
+‎                        <p class="pr-6 font-bold text-lg leading-snug">"${c[1]}"</p>
+‎                        <p class="text-[9px] text-[#00ff85] mt-3 font-black uppercase">— ${c[0]}</p>
+‎                    </div>`;
+‎                }).join('');
+‎
+‎            } catch (e) { console.error(e); }
+‎        }
+‎        init();
+‎    </script>
+‎</body>
+‎</html>
+‎
