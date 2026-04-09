@@ -38,8 +38,8 @@
 
     <main class="max-w-md mx-auto p-4 pb-32">
 
-        <section id="pulse" class="tab-content active-content">
-    <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">Latest Pulse</h2>
+        <section id="news" class="tab-content active-content">
+    <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">Latest News</h2>
 
 <div class="flex flex-col space-y-6">
     
@@ -219,7 +219,7 @@
     </main>
 
     <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-6 pb-6 pt-3 flex justify-between z-50">
-        <button onclick="openTab('news', this)" class="nav-btn active-tab flex flex-col items-center"><span class="text-[10px] font-black uppercase">Pulse</span></button>
+        <button onclick="openTab('news', this)" class="nav-btn active-tab flex flex-col items-center"><span class="text-[10px] font-black uppercase">News</span></button>
         <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center"><span class="text-[10px] font-black uppercase">Squad</span></button>
         <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center"><span class="text-[10px] font-black uppercase">MVP</span></button>
     </nav>
@@ -239,7 +239,7 @@
 </body>
 </html>
    <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-4 pb-6 pt-3 flex justify-between z-50">
-    <button onclick="openTab('news', this)" class="nav-btn active-tab flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Pulse</span></button>
+    <button onclick="openTab('news', this)" class="nav-btn active-tab flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">News</span></button>
     <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Squad</span></button>
     <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">MVP</span></button>
     <button onclick="openTab('moments', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Moments</span></button>
@@ -269,7 +269,7 @@
 ‎
 ‎        async function init() {
 ‎            try {
-‎                // LOAD PULSE
+‎                // LOAD NEWS
 ‎                const pText = await fetch(links.news).then(r => r.text());
 ‎                document.getElementById('news-list').innerHTML = pText.split('\n').slice(1).map(r => {
 ‎                    const c = r.split(','); if(!c[2]) return '';
@@ -346,10 +346,10 @@
         }
 
         window.onload = function() {
-            const pulseTab = document.getElementById('pulse');
-            if (pulseTab) {
-                pulseTab.style.display = 'block';
-                pulseTab.classList.add('active-content');
+            const newsTab = document.getElementById('news');
+            if (newsTab) {
+                newsTab.style.display = 'block';
+                newsTab.classList.add('active-content');
             }
         };
     </script>
