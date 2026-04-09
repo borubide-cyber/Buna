@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Council Street League</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: sans-serif; background-color: #0a0514; color: white; }
+        body { font-family: sans-serif; background-color: #0a0514; color: white; margin: 0; padding: 0; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
         .tab-content { display: none; }
         .active-content { display: block !important; }
@@ -18,13 +18,13 @@
         <div class="mb-4">
             <img src="file_00000000e5e872469d1b19c737f59423c8808d9f.jpg" alt="CSL Logo" class="w-20 h-20 mx-auto object-contain drop-shadow-[0_0_15px_rgba(0,255,133,0.3)]">
         </div>
-        <h1 class="text-4xl font-black italic tracking-tighter uppercase">Council Street</h1>
-        <p class="text-[10px] font-black text-[#00ff85] tracking-[0.3em] uppercase mt-2 italic">League 2026</p>
+        <h1 class="text-4xl font-black italic tracking-tighter uppercase leading-none">Council Street</h1>
+        <p class="text-[10px] font-black text-[#00ff85] tracking-[0.3em] uppercase mt-2 italic">Bnation Media Official Hub</p>
     </header>
 
     <section id="news" class="tab-content active-content px-6 space-y-6">
-        <h2 class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Latest Updates</h2>
-        <details class="glass rounded-[2rem] border-2 border-[#00ff85] overflow-hidden bg-gradient-to-br from-[#1a0b2e] to-black shadow-[0_0_20px_rgba(0,255,133,0.1)]">
+        <h2 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Latest Updates</h2>
+        <details class="glass rounded-[2rem] border-2 border-[#00ff85] overflow-hidden bg-gradient-to-br from-[#1a0b2e] to-black">
             <summary class="p-6 list-none cursor-pointer flex justify-between items-start">
                 <div class="pr-12">
                     <span class="bg-[#00ff85] text-black text-[8px] font-black px-3 py-1 rounded-full uppercase">Breaking</span>
@@ -49,10 +49,6 @@
             <span class="font-black italic text-white uppercase tracking-tight">Steven</span>
             <span class="text-[10px] font-bold text-slate-400">14 GOALS</span>
         </div>
-        <div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center">
-            <span class="font-black italic text-white uppercase tracking-tight">Abraham</span>
-            <span class="text-[10px] font-bold text-slate-400">7 GOALS</span>
-        </div>
     </section>
 
     <section id="mvp" class="tab-content px-6">
@@ -73,364 +69,17 @@
 
     <script>
         function openTab(tabId, el) {
-            // Hide all tabs
             const contents = document.getElementsByClassName("tab-content");
-            for (let c of contents) { 
-                c.style.display = "none"; 
-                c.classList.remove("active-content"); 
-            }
-            
-            // Show the selected tab
+            for (let c of contents) { c.style.display = "none"; c.classList.remove("active-content"); }
             const target = document.getElementById(tabId);
             target.style.display = "block";
             target.classList.add("active-content");
-            
-            // Reset button colors
             const buttons = document.getElementsByClassName("nav-btn");
-            for (let b of buttons) { 
-                b.classList.remove("text-[#00ff85]"); 
-                b.classList.add("text-slate-500"); 
-            }
-            // Highlight active button
+            for (let b of buttons) { b.classList.remove("text-[#00ff85]"); b.classList.add("text-slate-500"); }
             el.classList.add("text-[#00ff85]");
             el.classList.remove("text-slate-500");
         }
     </script>
 </body>
-</html>
-    </div>
-
-    <h1 class="text-4xl font-[950] italic tracking-tighter text-white uppercase leading-none">
-        Council Street
-    </h1>
-    <p class="text-[10px] font-black text-[#00ff85] tracking-[0.3em] uppercase mt-2">
-        Bnation Media Official Hub
-    </p>
-</header>
-
-
-
-
-    <main class="max-w-md mx-auto p-4 pb-32">
-
-        <section id="news" class="tab-content active-content">
-    <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">Latest News</h2>
-
-<div class="flex flex-col space-y-6">
+        </html>
     
-    <details class="glass rounded-[2rem] border-2 border-[#00ff85] overflow-hidden group shadow-[0_0_20px_rgba(0,255,133,0.15)] bg-gradient-to-br from-[#1a0b2e] to-black">
-        <summary class="p-6 list-none cursor-pointer flex justify-between items-start">
-            <div class="pr-12">
-                <span class="bg-[#00ff85] text-black text-[8px] font-black px-3 py-1 rounded-full uppercase italic tracking-widest">BREAKING</span>
-                <h3 class="text-xl font-black italic mt-3 text-white uppercase leading-tight">Headline Goes Here</h3>
-                <div class="flex items-center space-x-3 mt-3">
-                    <span class="text-[9px] font-black text-white/90">APRIL 7, 2026</span>
-                    <span class="w-1 h-1 rounded-full bg-[#00ff85]"></span>
-                    <span class="text-[9px] font-black text-[#00ff85]">9:30 PM</span>
-                </div>
-            </div>
-            <div class="bg-[#00ff85]/10 p-2 rounded-full mt-2">
-                <span class="text-[#00ff85] transition-transform group-open:rotate-180 block">▼</span>
-            </div>
-        </summary>
-        <div class="px-6 pb-6 text-sm text-slate-300 border-t border-white/10 pt-5 leading-relaxed bg-black/20">
-            Full story details go here. Everything is bold and clear.
-        </div>
-    </details>
-
-    <details class="glass rounded-[2rem] border-2 border-white/20 overflow-hidden group shadow-xl bg-gradient-to-br from-slate-900 to-black">
-        <summary class="p-6 list-none cursor-pointer flex justify-between items-start">
-            <div class="pr-12">
-                <span class="bg-white/10 text-white text-[8px] font-black px-3 py-1 rounded-full uppercase tracking-widest">ARCHIVE</span>
-                <h3 class="text-xl font-black italic mt-3 text-white uppercase leading-tight">Buna is the admin of this site!</h3>
-                <div class="flex items-center space-x-3 mt-3">
-                    <span class="text-[9px] font-black text-white/70">APRIL 7, 2026</span>
-                    <span class="w-1 h-1 rounded-full bg-white/30"></span>
-                    <span class="text-[9px] font-black text-white/70">4:10 PM</span>
-                </div>
-            </div>
-            <div class="bg-white/5 p-2 rounded-full mt-2">
-                <span class="text-white/40 transition-transform group-open:rotate-180 block">▼</span>
-            </div>
-        </summary>
-        <div class="px-6 pb-6 text-sm text-slate-400 border-t border-white/10 pt-5 bg-black/20">
-            Official Bnation Media announcement for the Counsil Street League.
-        </div>
-    </details>
-
-</div>
-
-
-    </div>
-</section>
-
-
-        <section id="squad" class="tab-content">
-            <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">The Squad</h2>
-                    <div class="grid grid-cols-1 gap-4">
-            
-            <div class="flex items-center glass p-4 rounded-2xl border-l-2 border-[#00ff85]">
-                <div class="w-12 h-12 rounded-full bg-[#3d195b] border border-[#00ff85] flex items-center justify-center font-black text-white">10</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Buna</h4>
-                    <p class="text-[9px] font-bold text-slate-400">MIDFIELDER | <span class="text-[#00ff85]">G: 25</span> | A: 13</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">9</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Steven</h4>
-                    <p class="text-[9px] font-bold text-slate-400">FORWARD | <span class="text-[#00ff85]">G: 14</span> | A: 2</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">6</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Abraham</h4>
-                    <p class="text-[9px] font-bold text-slate-400">FORWARD | <span class="text-[#00ff85]">G: 7</span> | A: 19</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">11</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Thymzo</h4>
-                    <p class="text-[9px] font-bold text-slate-400">FORWARD | <span class="text-[#00ff85]">G: 6</span> | A: 9</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">4</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Zino</h4>
-                    <p class="text-[9px] font-bold text-slate-400">MIDFIELDER | <span class="text-[#00ff85]">G: 4</span> | A: 7</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">8</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Odegard</h4>
-                    <p class="text-[9px] font-bold text-slate-400">MIDFIELDER | <span class="text-[#00ff85]">G: 3</span> | A: 7</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">4</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Christian</h4>
-                    <p class="text-[9px] font-bold text-slate-400">MIDFIELDER | <span class="text-[#00ff85]">G: 3</span> | A: 6</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">7</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Kasper</h4>
-                    <p class="text-[9px] font-bold text-slate-400">FORWARD | <span class="text-[#00ff85]">G: 2</span> | A: 7</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">1</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Classic</h4>
-                    <p class="text-[9px] font-bold text-slate-400">DEFENDER | <span class="text-[#00ff85]">G: 4</span> | A: 6</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">3</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Uche</h4>
-                    <p class="text-[9px] font-bold text-slate-400">DEFENDER | <span class="text-[#00ff85]">G: 3</span> | A: 4</p>
-                </div>
-            </div>
-
-            <div class="flex items-center glass p-4 rounded-2xl">
-                <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-white">2</div>
-                <div class="ml-4">
-                    <h4 class="text-lg font-black italic uppercase">Desmond</h4>
-                    <p class="text-[9px] font-bold text-slate-400">DEFENDER | <span class="text-[#00ff85]">G: 1</span> | A: 1</p>
-                </div>
-            </div>
-
-                </div>
-                    
-        </section>
-
-                        <section id="spotlight" class="tab-content">
-    <h2 class="text-xs font-black text-slate-500 uppercase mb-6 tracking-[0.2em]">League Honors</h2>
-    
-    <div class="bg-gradient-to-br from-[#2a1d08] via-[#110c03] to-black p-8 rounded-[2.5rem] border-2 border-[#eab308]/40 text-center relative shadow-[0_0_30px_rgba(234,179,8,0.2)]">
-        <span class="bg-[#eab308] text-black text-[9px] font-[900] px-5 py-1 rounded-full uppercase tracking-widest shadow-lg">PLAYER OF THE WEEK</span>
-        
-        <div class="w-40 h-40 mx-auto rounded-full mt-8 border-4 border-[#eab308] bg-slate-900 flex items-center justify-center font-[900] italic text-[#eab308] shadow-[0_0_20px_rgba(234,179,8,0.3)] text-2xl">STEVEN</div>
-        
-        <h2 class="text-4xl font-[900] italic uppercase tracking-tighter text-white mt-4">Steven</h2>
-        <p class="text-[#eab308] font-black text-[11px] uppercase tracking-[0.2em] mt-2">Elite Performer • Week 14</p>
-    </div>
-
-    <div class="mt-8">
-        <h3 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Top Contenders</h3>
-        <div class="space-y-3">
-            <div class="flex justify-between items-center glass p-3 rounded-xl border-l-2 border-slate-400">
-                <span class="text-xs font-bold text-white">2. BUNA</span>
-                <span class="text-[10px] font-bold text-slate-400">4 GOALS</span>
-            </div>
-            <div class="flex justify-between items-center glass p-3 rounded-xl border-l-2 border-slate-600">
-                <span class="text-xs font-bold text-white">3. ABRAHAM</span>
-                <span class="text-[10px] font-bold text-slate-400">3 GOALS</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-    </main>
-
-    <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-6 pb-6 pt-3 flex justify-between z-50">
-        <button onclick="openTab('news', this)" class="nav-btn active-tab flex flex-col items-center"><span class="text-[10px] font-black uppercase">News</span></button>
-        <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center"><span class="text-[10px] font-black uppercase">Squad</span></button>
-        <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center"><span class="text-[10px] font-black uppercase">MVP</span></button>
-    </nav>
-
-    <script>
-        function openTab(tabId, btn) {
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-content'));
-            document.querySelectorAll('.nav-btn').forEach(b => {
-                b.classList.remove('active-tab', 'text-slate-100');
-                b.classList.add('text-slate-500');
-            });
-            document.getElementById(tabId).classList.add('active-content');
-            btn.classList.add('active-tab', 'text-slate-100');
-            btn.classList.remove('text-slate-500');
-        }
-    </script>
-</body>
-</html>
-   <nav class="fixed bottom-0 left-0 right-0 bg-[#0a0224] border-t border-white/10 px-4 pb-6 pt-3 flex justify-between z-50">
-    <button onclick="openTab('news', this)" class="nav-btn active-tab flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">News</span></button>
-    <button onclick="openTab('squad', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Squad</span></button>
-    <button onclick="openTab('spotlight', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">MVP</span></button>
-    <button onclick="openTab('moments', this)" class="nav-btn text-slate-500 flex flex-col items-center flex-1"><span class="text-[9px] font-black uppercase">Moments</span></button>
-</nav>
-
-‎
-‎    <script>
-‎        // CONFIG: PASTE YOUR 4 LINKS HERE
-‎        const links = {
-‎            news: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=1664812316&single=true&output=csv",
-‎            squad: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=1087938023&single=true&output=csv",
-‎            spotlight: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=878778781&single=true&output=csv",
-‎            moments: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT5p8h0BclTz1FXRbbW80myAuP_gZTF39JqZ3nvWGeXsC0okrJzpV_lO2QwXojEemIuiMr-aCiTpLI3/pub?gid=988841300&single=true&output=csv"
-‎        };
-‎
-‎        function openTab(tabId, btn) {
-‎            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-content'));
-‎            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active-tab', 'text-slate-100'));
-‎            document.querySelectorAll('.nav-btn').forEach(b => b.classList.add('text-slate-500'));
-‎            
-‎            document.getElementById(tabId).classList.add('active-content');
-‎            btn.classList.add('active-tab');
-‎            btn.classList.remove('text-slate-500');
-‎            btn.classList.add('text-slate-100');
-‎            window.scrollTo(0,0);
-‎        }
-‎
-‎        async function init() {
-‎            try {
-‎                // LOAD NEWS
-‎                const pText = await fetch(links.news).then(r => r.text());
-‎                document.getElementById('news-list').innerHTML = pText.split('\n').slice(1).map(r => {
-‎                    const c = r.split(','); if(!c[2]) return '';
-‎                    return `<div class="glass p-5 rounded-2xl border-l-4 border-[#00ff85]">
-‎                        <div class="flex justify-between items-center mb-2">
-‎                            <span class="text-[9px] font-black text-[#00ff85] uppercase tracking-widest">${c[1]}</span>
-‎                            <span class="text-[8px] text-slate-500">${c[0]}</span>
-‎                        </div>
-‎                        <h3 class="text-lg font-bold leading-tight">${c[2]}</h3>
-‎                    </div>`;
-‎                }).join('');
-‎
-‎                // LOAD SQUAD
-‎                const sText = await fetch(links.squad).then(r => r.text());
-‎                document.getElementById('squad-grid').innerHTML = sText.split('\n').slice(1).map(r => {
-‎                    const c = r.split(','); if(!c[0]) return '';
-‎                    return `<div class="flex items-center glass p-4 rounded-2xl">
-‎                        <img src="${c[2]}" class="w-14 h-14 rounded-full object-cover border-2 border-purple-500">
-‎                        <div class="ml-4">
-‎                            <h4 class="text-lg font-black italic uppercase">${c[0]}</h4>
-‎                            <div class="flex space-x-3 text-[9px] font-bold text-slate-400">
-‎                                <span>GOALS: ${c[3]}</span> <span>ASSISTS: ${c[4]}</span>
-‎                            </div>
-‎                        </div>
-‎                    </div>`;
-‎                }).join('');
-‎
-‎                // LOAD SPOTLIGHT
-‎                const spText = await fetch(links.spotlight).then(r => r.text());
-‎                const sp = spText.split('\n')[1].split(',');
-‎                document.getElementById('mvp-content').innerHTML = `
-‎                    <div class="bg-gradient-to-br from-[#3d195b] to-black p-10 rounded-[2.5rem] border border-[#00ff85]/20 text-center shadow-2xl">
-‎                        <span class="bg-[#00ff85] text-black text-[10px] font-black px-4 py-1 rounded-full">MVP OF THE DAY</span>
-‎                        <img src="${sp[2]}" class="w-40 h-40 mx-auto rounded-full mt-8 border-4 border-[#00ff85] object-cover shadow-[0_0_20px_rgba(0,255,133,0.3)]">
-‎                        <h2 class="text-4xl font-900 mt-6 italic uppercase tracking-tighter">${sp[0]}</h2>
-‎                        <p class="text-[#00ff85] font-bold text-sm mt-2 uppercase tracking-widest">${sp[3]}</p>
-‎                    </div>`;
-‎
-‎                // LOAD MOMENTS
-‎                const mText = await fetch(links.moments).then(r => r.text());
-‎                document.getElementById('moments-list').innerHTML = mText.split('\n').slice(1).map(r => {
-‎                    const c = r.split(','); if(!c[1]) return '';
-‎                    return `<div class="glass p-5 rounded-2xl italic text-slate-300 relative">
-‎                        <span class="text-4xl absolute top-2 right-4 opacity-10">"</span>
-‎                        <p class="pr-6 font-bold text-lg leading-snug">"${c[1]}"</p>
-‎                        <p class="text-[9px] text-[#00ff85] mt-3 font-black uppercase">— ${c[0]}</p>
-‎                    </div>`;
-‎                }).join('');
-‎
-‎            } catch (e) { console.error(e); }
-‎        }
-‎        init();
-    <script>
-        function openTab(tabId, el) {
-            const content = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < content.length; i++) {
-                content[i].style.display = "none";
-                content[i].classList.remove("active-content");
-            }
-
-            const buttons = document.getElementsByClassName("nav-btn");
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].classList.remove("active-tab");
-                buttons[i].style.color = "#64748b";
-            }
-
-            const selectedTab = document.getElementById(tabId);
-            if (selectedTab) {
-                selectedTab.style.display = "block";
-                selectedTab.classList.add("active-content");
-            }
-            el.classList.add("active-tab");
-            el.style.color = "#00ff85";
-        }
-
-        window.onload = function() {
-            const newsTab = document.getElementById('news');
-            if (newsTab) {
-                newsTab.style.display = 'block';
-                newsTab.classList.add('active-content');
-            }
-        };
-    </script>
-
-</body>
-</html>
-‎</body>
-‎</html>
-‎
