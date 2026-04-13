@@ -126,217 +126,63 @@ Combining the veteran leadership of Buna with Cherki’s clinical finishing, the
     </section>
 
     <section id="squad" class="tab-content px-6 space-y-4">
-<h2 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">League Squad - Season Start</h2>
 
-<div class="glass p-4 rounded-2xl border-l-4 border-[#00ff85] flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight">Buna (Admin)</span>
-        <span class="block text-[9px] text-[#00ff85] font-bold uppercase mt-1 italic opacity-80">"BUNA"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-[#00ff85] uppercase">G: 0</span>
-    </div>
-</div>
+<h2 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">CSL Golden Boot Race</h2>
+<div id="leaderboard-container"></div>
 
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Abraham</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 1</span>
-    </div>
-</div>
+<script>
+    const players = [
+        { name: "Abraham", nickname: "NICKNAME HERE", goals: 1 },
+        { name: "Junior", nickname: "NICKNAME HERE", goals: 1 },
+        { name: "Kasper", nickname: "NICKNAME HERE", goals: 1 },
+        { name: "Buna (Admin)", nickname: "BUNA", goals: 0, isAdmin: true },
+        { name: "Carrick", nickname: "MR NICE", goals: 0 },
+        { name: "Cherki", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Christian", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Christo", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Classic", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Coolest Kid", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Desmond", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Dj", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Emma", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Green", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Odegard", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Steven", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Thymzo", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Uche", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Waris", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Wesley", nickname: "NICKNAME HERE", goals: 0 },
+        { name: "Zino", nickname: "NICKNAME HERE", goals: 0 }
+    ];
 
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Carrick</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"MR NICE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
+    // SORT: Highest goals first
+    players.sort((a, b) => b.goals - a.goals);
 
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Cherki</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Christian</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Christo</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Classic</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Coolest Kid</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Desmond</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Dj</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Emma</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Green</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Junior</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 1</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Kasper</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 1</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Odegard</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Steven</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Thymzo</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Uche</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Waris</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Wesley</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-</div>
-
-<div class="glass p-4 rounded-2xl border-l-4 border-slate-700 flex justify-between items-center mb-3">
-    <div>
-        <span class="font-black italic text-white uppercase tracking-tight text-sm">Zino</span>
-        <span class="block text-[9px] text-slate-500 font-bold uppercase mt-1 italic">"NICKNAME HERE"</span>
-    </div>
-    <div>
-        <span class="text-[11px] font-bold text-white uppercase">G: 0</span>
-    </div>
-          </div>
+    const container = document.getElementById('leaderboard-container');
+    
+    players.forEach((player, index) => {
+        const rank = index + 1;
+        // Design logic: Admin gets green, Top 3 get white, others get dim
+        const borderClass = player.isAdmin ? 'border-[#00ff85]' : (rank <= 3 && player.goals > 0 ? 'border-white' : 'border-slate-700');
+        const rankColor = rank <= 3 && player.goals > 0 ? 'text-[#00ff85]' : 'text-slate-500';
+        
+        container.innerHTML += `
+            <div class="glass p-4 rounded-2xl border-l-4 ${borderClass} flex justify-between items-center mb-3">
+                <div class="flex items-center gap-4">
+                    <span class="text-xs font-black ${rankColor}">#${rank}</span>
+                    <div>
+                        <span class="font-black italic text-white uppercase tracking-tight text-sm">${player.name}</span>
+                        <span class="block text-[9px] ${player.isAdmin ? 'text-[#00ff85]' : 'text-slate-500'} font-bold uppercase mt-1 italic">"${player.nickname}"</span>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-[11px] font-bold ${player.isAdmin ? 'text-[#00ff85]' : 'text-white'} uppercase">G: ${player.goals}</span>
+                </div>
+            </div>
+        `;
+    });
+</script>
+       
   
 
     </section>
