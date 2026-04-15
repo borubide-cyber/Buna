@@ -159,60 +159,70 @@ Combining the veteran leadership of Buna with Cherki’s clinical finishing, the
 <h2 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">CSL Golden Boot Race</h2>
 <div id="leaderboard-container"></div>
 
+
 <script>
     const players = [
-        { name: "Abraham", nickname: "EVIL DEMO", goals: 1 },
+        { name: "Thymzo", nickname: "NICKNAME HERE", goals: 3 },
         { name: "Junior", nickname: "NICKNAME HERE", goals: 2 },
+        { name: "Abraham", nickname: "NICKNAME HERE", goals: 1 },
         { name: "Kasper", nickname: "NICKNAME HERE", goals: 1 },
-        { name: "Buna", nickname: "BRUNO", goals: 1, isAdmin: true },
-        { name: "Carrick", nickname: "MR NICE", goals: 0 },
+        { name: "Buna (Admin)", nickname: "BUNA", goals: 1, isAdmin: true },
         { name: "Cherki", nickname: "NICKNAME HERE", goals: 1 },
+        { name: "Endo", nickname: "NICKNAME HERE", goals: 1 },
+        { name: "Odegard", nickname: "NICKNAME HERE", goals: 1 },
+        { name: "Carrick", nickname: "MR NICE", goals: 0 },
         { name: "Christian", nickname: "NICKNAME HERE", goals: 0 },
         { name: "Christo", nickname: "NICKNAME HERE", goals: 0 },
         { name: "Classic", nickname: "NICKNAME HERE", goals: 0 },
         { name: "Coolest Kid", nickname: "NICKNAME HERE", goals: 0 },
         { name: "Desmond", nickname: "NICKNAME HERE", goals: 0 },
         { name: "Dj", nickname: "NICKNAME HERE", goals: 0 },
-        { name: "Emma", nickname: "ARSENAL", goals: 0 },
-        { name: "Endo", nickname: "NICKNAME HERE", goals: 1 },
+        { name: "Emma", nickname: "NICKNAME HERE", goals: 0 },
         { name: "Green", nickname: "NICKNAME HERE", goals: 0 },
-        { name: "Odegard", nickname: "NICKNAME HERE", goals: 1 },
-        { name: "Steven", nickname: "EKITIKE", goals: 0 },
-        { name: "Thymzo", nickname: "NICKNAME HERE", goals: 3 },
+        { name: "Steven", nickname: "NICKNAME HERE", goals: 0 },
         { name: "Uche", nickname: "NICKNAME HERE", goals: 0 },
         { name: "Waris", nickname: "NICKNAME HERE", goals: 0 },
         { name: "Wesley", nickname: "NICKNAME HERE", goals: 0 },
-        { name: "Zino", nickname: "CAMAVINGA", goals: 0 }
+        { name: "Zino", nickname: "NICKNAME HERE", goals: 0 }
     ];
 
-    // SORT: Highest goals first
+    // Auto-sort: Highest goals at the top
     players.sort((a, b) => b.goals - a.goals);
 
     const container = document.getElementById('leaderboard-container');
+    container.innerHTML = ''; 
     
     players.forEach((player, index) => {
         const rank = index + 1;
-        // Design logic: Admin gets green, Top 3 get white, others get dim
         const borderClass = player.isAdmin ? 'border-[#00ff85]' : (rank <= 3 && player.goals > 0 ? 'border-white' : 'border-slate-700');
-        const rankColor = rank <= 3 && player.goals > 0 ? 'text-[#00ff85]' : 'text-slate-500';
         
+        // Convert goal numbers to ⚽ icons
+        let goalIcons = "";
+        if (player.goals > 0) {
+            for (let i = 0; i < player.goals; i++) {
+                goalIcons += "⚽"; 
+            }
+        } else {
+            goalIcons = "–"; 
+        }
+
         container.innerHTML += `
             <div class="glass p-4 rounded-2xl border-l-4 ${borderClass} flex justify-between items-center mb-3">
                 <div class="flex items-center gap-4">
-                    <span class="text-xs font-black ${rankColor}">#${rank}</span>
+                    <span class="text-xs font-black text-slate-500">#${rank}</span>
                     <div>
                         <span class="font-black italic text-white uppercase tracking-tight text-sm">${player.name}</span>
                         <span class="block text-[9px] ${player.isAdmin ? 'text-[#00ff85]' : 'text-slate-500'} font-bold uppercase mt-1 italic">"${player.nickname}"</span>
                     </div>
                 </div>
-                <div>
-                    <span class="text-[11px] font-bold ${player.isAdmin ? 'text-[#00ff85]' : 'text-white'} uppercase">G: ${player.goals}</span>
+                <div class="flex items-center gap-1">
+                    <span class="text-[14px] leading-none">${goalIcons}</span>
                 </div>
             </div>
         `;
     });
 </script>
-       
+
   
 
     </section>
