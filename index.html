@@ -343,5 +343,18 @@ Combining the veteran leadership of Buna with Cherki’s clinical finishing, the
         <button onclick="openTab('mvp', this)" class="nav-btn px-6 py-3 text-slate-500 font-black text-[10px] uppercase italic">MVP</button>
     </nav>
 
-    <script>
-  
+<script>
+        function openTab(tabId, el) {
+            const contents = document.getElementsByClassName("tab-content");
+            for (let c of contents) { c.style.display = "none"; c.classList.remove("active-content"); }
+            const target = document.getElementById(tabId);
+            target.style.display = "block";
+            target.classList.add("active-content");
+            const buttons = document.getElementsByClassName("nav-btn");
+            for (let b of buttons) { b.classList.remove("text-[#00ff85]"); b.classList.add("text-slate-500"); }
+            el.classList.add("text-[#00ff85]");
+            el.classList.remove("text-slate-500");
+        }
+    </script>
+</body>
+</html>  
