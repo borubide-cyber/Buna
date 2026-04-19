@@ -10,62 +10,83 @@
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
         .tab-content { display: none; }
         .active-content { display: block !important; }
-       /* --- MVP SECTION START --- */
-.league-honors-card {
-    text-align: center;
-    padding: 30px 15px;
-    background: #000 !important;
-    border: 1px solid #D4AF37 !important;
-    border-radius: 15px;
-    margin: 20px auto;
-    width: 90%;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+/* --- HISTORY LIST STYLING --- */
+.winners-history {
+    margin-top: 30px;
+    padding-bottom: 80px; /* Space for the bottom nav */
 }
 
-.badge {
-    background: #D4AF37 !important;
-    color: #000 !important;
-    padding: 4px 12px;
-    border-radius: 5px;
+.history-header {
+    color: #D4AF37;
     font-size: 11px;
-    font-weight: 900;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.7;
 }
 
-.mvp-names {
-    color: #fff !important;
-    font-size: 26px;
-    font-weight: 800;
-    margin: 15px 0;
-    font-style: italic;
-    text-transform: uppercase;
+.history-row {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
 }
 
-.mvp-stats {
-    color: #D4AF37 !important;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 10px 0;
-}
-
-.divider {
-    width: 40px;
-    height: 2px;
-    background: #D4AF37;
-    margin: 5px auto;
-}
-
-.mvp-footer {
-    color: #555 !important;
+.history-week {
     font-size: 9px;
-    margin-top: 15px;
-    letter-spacing: 2px;
+    font-weight: 900;
+    color: #D4AF37;
+    border-right: 1px solid #333;
+    padding-right: 12px;
+    margin-right: 12px;
+}
+
+.history-main {
+    flex-grow: 1;
+}
+
+.history-winner {
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
     text-transform: uppercase;
 }
-/* --- MVP SECTION END --- */
-   
+
+.history-subtitle {
+    color: #666;
+    font-size: 8px;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+.history-stat-box {
+    text-align: center;
+    background: #D4AF37;
+    padding: 4px 10px;
+    border-radius: 6px;
+    min-width: 45px;
+}
+
+.stat-num {
+    display: block;
+    color: #000;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.stat-label {
+    display: block;
+    color: #000;
+    font-size: 7px;
+    font-weight: bold;
+}
+
     </style>
 </head>
 <body class="min-h-screen pb-32">
@@ -322,20 +343,33 @@ Combining the veteran leadership of Buna with Cherki’s clinical finishing, the
 
     </section>
 
-    <section id="mvp" class="tab-content px-6">
-<div class="league-honors-card">
-    <span class="badge">PLAYERS OF THE WEEK</span>
-    
-    <div class="mvp-text-container">
-        <h1 class="mvp-names">THYMZO & JUNIOR</h1>
-        <div class="divider"></div>
-        <p class="mvp-stats">3 GOALS EACH</p>
-    </div>
-    
-    <p class="mvp-footer">COUNCIL STREET LEAGUE JOINT KINGS</p>
-</div>
+<section id="mvp" class="tab-content px-6">
 
-    </section>
+    <div class="league-honors-card">
+        <span class="badge">WEEK 2 CHAMPION</span>
+        <h2 class="mvp-names">TO BE ANNOUNCED</h2>
+        <div class="divider"></div>
+        <p class="mvp-stats">CURRENT MATCHES IN PROGRESS</p>
+    </div>
+
+    <div class="winners-history">
+        <h3 class="history-header">SEASON 1 RECORDS</h3>
+
+        <div class="history-row">
+            <div class="history-week">WK 01</div>
+            <div class="history-main">
+                <p class="history-winner">THYMZO & JUNIOR</p>
+                <p class="history-subtitle">Inaugural Season Co-MVPs</p>
+            </div>
+            <div class="history-stat-box">
+                <span class="stat-num">3</span>
+                <span class="stat-label">GOALS EACH</span>
+            </div>
+        </div>
+
+        </div>
+</section>
+
 
     <nav class="fixed bottom-6 left-6 right-6 glass border border-white/10 rounded-full p-2 flex justify-around items-center shadow-2xl">
         <button onclick="openTab('news', this)" class="nav-btn px-6 py-3 text-[#00ff85] font-black text-[10px] uppercase italic">News</button>
