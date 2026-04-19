@@ -80,7 +80,43 @@
     padding: 12px 15px;
     margin-bottom: 10px;
 }
+/* --- NAVIGATION RECOVERY STYLES --- */
+.glass {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
+nav.fixed-bottom-6 {
+    position: fixed !important;
+    bottom: 24px !important;
+    left: 24px !important;
+    right: 24px !important;
+    height: 65px;
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    z-index: 9999; /* This forces it to stay on top of everything */
+}
+
+nav button {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* This makes the active button green */
+nav button:focus, nav button.active {
+    color: #00ff85 !important;
+   }
+   
 .history-week {
     font-size: 9px;
     font-weight: 900;
@@ -128,46 +164,7 @@
 .stat-label {
     display: block;
     color: #000;
-    font-size: 7px;
-    font-weight: bold;
-}
-/* --- BOTTOM NAVIGATION STYLES --- */
-.glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-nav.fixed-bottom-6 {
-    position: fixed;
-    bottom: 24px;
-    left: 24px;
-    right: 24px;
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 40px;
-    z-index: 1000;
-}
-
-nav button {
-    background: transparent;
-    border: none;
-    color: #666;
-    font-size: 12px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* This makes the active tab (like MVP) green */
-nav button.active-tab, nav button.text-[#00ff85] {
-    color: #00ff85 !important;
-       }
+    font-size: 7px
    
     </style>
 </head>
