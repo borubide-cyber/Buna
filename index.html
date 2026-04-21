@@ -455,11 +455,13 @@ Combining the veteran leadership of Buna with Cherki’s clinical finishing, the
     </div>   
 </section>
 
-    <nav class="fixed bottom-6 left-6 right-6 glass border border-white/10 rounded-full p-2 flex justify-around items-center shadow-2xl">
-        <button onclick="openTab('news', this)" class="nav-btn px-6 py-3 text-[#00ff85] font-black text-[10px] uppercase italic">News</button>
-        <button onclick="openTab('squad', this)" class="nav-btn px-6 py-3 text-slate-500 font-black text-[10px] uppercase italic">Squad</button>
-        <button onclick="openTab('mvp', this)" class="nav-btn px-6 py-3 text-slate-500 font-black text-[10px] uppercase italic">MVP</button>
-    </nav>
+ <nav class="bottom-nav">
+    <button onclick="showTab('news')">NEWS</button>
+    <button onclick="showTab('squad')">SQUAD</button>
+    <button onclick="showTab('stats')">STATS</button> 
+    <button onclick="showTab('mvp')" class="active-nav">MVP</button>
+</nav>
+
 
 <script>
         function openTab(tabId, el) {
