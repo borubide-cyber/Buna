@@ -464,17 +464,30 @@ Combining the veteran leadership of Buna with Cherki’s clinical finishing, the
 
 
 <script>
-        function showTab(tabId, el) {
-            const contents = document.getElementsByClassName("tab-content");
-            for (let c of contents) { c.style.display = "none"; c.classList.remove("active-content"); }
-            const target = document.getElementById(tabId);
-            target.style.display = "block";
-            target.classList.add("active-content");
-            const buttons = document.getElementsByClassName("nav-btn");
-            for (let b of buttons) { b.classList.remove("text-[#00ff85]"); b.classList.add("text-slate-500"); }
-            el.classList.add("text-[#00ff85]");
-            el.classList.remove("text-slate-500");
+function showTab(tabId) {
+    // 1. Hide all sections
+    const contents = document.getElementsByClassName('tab-content');
+    for (let c of contents) {
+        c.style.display = "none";
+        c.classList.remove("active-content");
+    }
+
+    // 2. Show the one you clicked
+    const target = document.getElementById(tabId);
+    if (target) {
+        target.style.display = "block";
+        target.classList.add("active-content");
+    }
+
+    // 3. Update the button colors (Active state)
+    const buttons = document.querySelectorAll('.bottom-nav button');
+    buttons.forEach(btn => {
+        btn.classList.remove('active-nav');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+            btn.classList.add('active-nav');
         }
-    </script>
+    });
+}
+</script>
 </body>
-</html>  
+</html>
